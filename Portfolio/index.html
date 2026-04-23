@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTo’s Portfolio</title>
+    <meta name="description" content="クラウドワークスを中心に活動している、後藤英之のポートフォリオです。">
+
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f6c1600cc5.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/top.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1 class="header-title"><a href="#">GoTo’s Portfolio</a></h1>
+
+            <button type="button" class="hamburger-button"><i class="fa-solid fa-bars"></i></button>
+
+            <nav class="header-nav-list">
+                <ul class="header-nav-list-group">
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- カバー -->
+        <div class="cover flex">
+            <img src="./images/Top-image.png" alt="">
+            <p class="cover-catch">あなたのご要望を、<br>WEB上でカタチに変える。</p>
+        </div>
+
+        <section id="skills" class="skills">
+            <h2 class="section-title">SKILLS</h2>
+
+            <div class="skills-item-container">
+                <ul class="skills-item-list">
+                    <li class="skills-item flex"><img src="./images/icons/html_icon.svg" alt="">HTML5</li>
+                    <li class="skills-item flex"><img src="./images/icons/css_icon.svg" alt="">CSS3</li>
+                    <li class="skills-item flex"><img src="./images/icons/javascript_icon.svg" alt="">JavaScript</li>
+                    <li class="skills-item flex"><img src="./images/icons/jquery_icon.svg" alt="jQuery"></li>
+                    <li class="skills-item flex"><img src="./images/icons/photoshop_icon.png" alt="">Photoshop</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <h2 class="section-title">WORKS</h2>
+
+            <div class="works-item-container flex">
+                <ul class="works-item-list">
+                    <li class="works-item flex">
+                        <div class="img-container">
+                            <img src="./images/works/english-school.png" alt=""><!-- 画像・テキスト差し替え -->
+                        </div>
+
+                        <div class="works-item-text">
+                            <h3 class="works-item-title">英会話教室Webページ</h3>
+                            <p class="works-item-detail">レスポンシブ対応、Pixelperfect</p>
+                            <p class="works-item-skill">使用スキル<br>HTML/CSS/jQuery</p>
+                        </div>
+                    </li>
+                    <li class="works-item flex">
+                        <div class="img-container">
+                            <img src="./images/works/corporate-site-img.png" alt=""><!-- 画像・テキスト差し替え -->
+                        </div>
+
+                        <div class="works-item-text">
+                            <h3 class="works-item-title">デザイン制作会社COサイト</h3>
+                            <p class="works-item-detail">レスポンシブ対応、Pixelperfect</p>
+                            <p class="works-item-skill">使用スキル<br>HTML/CSS/jQuery</p>
+                        </div>
+                    </li>
+                    <li class="works-item flex">
+                        <div class="img-container">
+                            <img src="./images/works/fitness.png" alt="">
+                        </div>
+
+                        <div class="works-item-text">
+                            <h3 class="works-item-title">フィットネスクラブTOPページデザイン</h3>
+                            <p class="works-item-detail">レスポンシブ対応、サイト設計</p>
+                            <p class="works-item-skill">使用スキル<br>Photoshop/Canva</p>
+                        </div>
+                    </li>
+                    <li class="works-item flex">
+                        <div class="img-container">
+                            <img class="recipe-SP" src="./images/works/recipe.png" alt="">
+                            <img class="recipe-banner" src="./works/recipe/stories.png" alt="">
+                        </div>
+
+                        <div class="works-item-text">
+                            <h3 class="works-item-title">レシピサイトTOPページ・バナー制作</h3>
+                            <p class="works-item-detail">レスポンシブ対応、バナー制作</p>
+                            <p class="works-item-skill">使用スキル<br>HTML/CSS/jQuery/Photoshop(バナー制作)</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="./bottom-page/works.html" class="button works-button">View more</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title">ABOUT</h2>
+
+            <div class="about-container flex">
+                <img src="./images/pht-mine.png" alt="後藤英之">
+                <div class="about-text">
+                    <h3 class="about-text-title">自己紹介</h3>
+                    <p>ポートフォリオをご覧いただきましてありがとうございます。後藤英之と申します。</p>
+                    <p>私は鳥取県在住の30代で、自転車店のスタッフとして働く傍ら、オンラインスクールでコーディングとWeb制作について学びました。現役の接客業で培ったヒアリング能力を活かして、Web制作の視点からクライアント様のご要望に寄り添う事を心がけております。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="contact" class="contact">
+            <h2 class="section-title">CONTACT</h2>
+
+            <form class="contact-form">
+
+                <div>
+                    <label class="contact-label" for="name">お名前</label>
+                    <input id="name" type="text" name="name">
+                </div>
+                <div>
+                    <label class="contact-label" for="email">メールアドレス</label>
+                    <input id="email" type="email" name="email" placeholder="example@mail.com">
+                </div>
+                <div>
+                    <label class="contact-label" for="inquiry">お問い合わせ内容</label>
+                    <textarea id="inquiry" name="inquiry"></textarea>
+                </div>
+
+                <input class="contact-button" type="submit" value="送信する">
+
+            </form>
+        </section> -->
+
+        <footer>
+            <small>2026 &copy;GoTo’s Portfolio</small>
+        </footer>
+    </main>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
