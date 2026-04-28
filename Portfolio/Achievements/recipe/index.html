@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipe Me!</title>
+    <meta name="description"
+        content="Recipe Me! (レシピミー！) は、人気の料理研究家の最新レシピや旬の食情報を毎日更新しています。時短・お手軽レシピ、お弁当メニュー、ケータリング、こだわりの料理まであなたの毎日をおいしく彩るレシピがきっと見つかります！">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <h1 class="header-logo">
+            <a href="#"><img src="images/header/header_logo.png" alt="Recipe Me!"></a>
+        </h1>
+
+        <!-- ハンバーガーボタン -->
+        <button type="button" class="hamburger-button">
+            <span class="hamburger-button-bar"></span>
+            <span class="hamburger-button-bar"></span>
+            <span class="hamburger-button-title">メニュー</span>
+        </button>
+
+        <!-- ハンバーガーメニュー -->
+        <div class="hamburger-menu header-nav-container">
+            <nav class="hamburger-nav-first">
+                <ul class="hamburger-nav-first-list-group">
+                    <li><a href="#">レシピ</a></li>
+                    <li><a href="#">特集</a></li>
+                    <li><a href="#">ランキング</a></li>
+                </ul>
+            </nav>
+            <nav class="hamburger-nav-second">
+                <ul class="hamburger-nav-second-list-group">
+                    <li><a href="#"><i class="hamburger-nav-second-list-group-icon bi bi-search"></i><span
+                                class="hamburger-nav-second-list-group-text">検索</span></a></li>
+                    <li><a href="#"><i class="hamburger-nav-second-list-group-icon bi bi-box-arrow-right"></i><span
+                                class="hamburger-nav-second-list-group-text">ログイン</span></a></li>
+                </ul>
+            </nav>
+            <nav class="hamburger-nav-third">
+                <ul>
+                    <li><a href="#">会社概要</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="#">利用規約</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                </ul>
+            </nav>
+            <ul class="hamburger-sns">
+                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <!-- メイン -->
+    <main class="main">
+
+        <!-- カバー -->
+        <div class="cover">
+
+            <!-- カルーセル -->
+            <div class="cover-slick">
+                <!-- 1枚目 -->
+                <div class="cover-slick-item">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="images/cover/cover_pc_1.jpg">
+                        <img src="images/cover/cover_sp_1.png" alt="沖縄定食のヘルシー料理「ゴーヤチャンプル」">
+                    </picture>
+                    <div class="cover-pickup">
+                        <img src="images/cover/cover_pickup.png" alt="Pick up" class="cover-pickup-image">
+                        <p class="cover-catch">暑さに負けるな！<br>夏バテ対策の定番レシピ</p>
+                        <span class="cover-category">全ジャンル</span>
+                        <span class="cover-date">2022.07.00</span>
+                        <a href="#" class="button button-white-ghost">もっと見る</a>
+                    </div>
+                </div>
+                <!-- 2枚目 -->
+                <div class="cover-slick-item">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="images/cover/cover_pc_2.jpg">
+                        <img src="images/cover/cover_sp_2.png" alt="瓶の中に砂糖をまぶした梅">
+                    </picture>
+                    <div class="cover-pickup">
+                        <img src="images/cover/cover_pickup.png" alt="Pick up" class="cover-pickup-image">
+                        <p class="cover-catch">6月の風物詩、<br>梅仕事に挑戦！</p>
+                        <span class="cover-category">全ジャンル</span>
+                        <span class="cover-date">2022.07.00</span>
+                        <a href="#" class="button button-white-ghost">もっと見る</a>
+                    </div>
+                </div>
+                <!-- 3枚目 -->
+                <div class="cover-slick-item">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="images/cover/cover_pc_3.png">
+                        <img src="images/cover/cover_sp_3.png" alt="3つのガラス瓶の中にピクルスやトマトやラッキョウ">
+                    </picture>
+                    <div class="cover-pickup">
+                        <img src="images/cover/cover_pickup.png" alt="Pick up" class="cover-pickup-image">
+                        <p class="cover-catch">簡単に作れる！<br>カラフル常備菜レシピ</p>
+                        <span class="cover-category">全ジャンル</span>
+                        <span class="cover-date">2022.07.00</span>
+                        <a href="#" class="button button-white-ghost">もっと見る</a>
+                    </div>
+                </div>
+            </div>
+            <!-- スクロール -->
+            <span class="cover-scroll"><img src="images/cover/cover_scroll.svg" alt="SCROLL"
+                    class="cover-scroll-image"></span>
+        </div>
+
+        <!-- 新着レシピ -->
+        <section class="new">
+            <div class="container">
+                <h2 class="section-title">
+                    <img src="images/news/new_title.png" alt="New" class="section-title-en">
+                    <span class="section-title-jp">新着レシピ</span>
+                </h2>
+                <div class="new-recipe">
+                    <!-- 1個目 -->
+                    <a href="#" class="new-recipe-item">
+                        <img src="images/news/new_1.png" alt="パンジャブ料理のプーリーとチョーレ・バトゥーレ" class="new-recipe-item-image">
+                        <h3 class="new-recipe-item-title">ヘルシーで高たんぱく！本格スパイスレシピ</h3>
+                        <div class="new-recipe-item-bottom">
+                            <span class="new-recipe-item-category">全ジャンル</span>
+                            <span class="new-recipe-item-date">2022.07.00</span>
+                        </div>
+                    </a>
+                    <!-- 2個目 -->
+                    <a href="#" class="new-recipe-item">
+                        <img src="images/news/new_2.png" alt="ヨーグルトにブルーベリー・ラズベリー・ナッツなどを散りばめたスイーツ"
+                            class="new-recipe-item-image">
+                        <h3 class="new-recipe-item-title">家族でクッキング！ヘルシーなフルーツ&ヨーグルトおやつ</h3>
+                        <div class="new-recipe-item-bottom">
+                            <span class="new-recipe-item-category">スイーツ</span>
+                            <span class="new-recipe-item-date">2022.07.00</span>
+                        </div>
+                    </a>
+                    <!-- 3個目 -->
+                    <a href="#" class="new-recipe-item">
+                        <img src="images/news/new_3.png" alt="韓国料理のプルコギ" class="new-recipe-item-image">
+                        <h3 class="new-recipe-item-title">ご飯が進む！ジューシー焼肉ランチ</h3>
+                        <div class="new-recipe-item-bottom">
+                            <span class="new-recipe-item-category">お肉</span>
+                            <span class="new-recipe-item-date">2022.07.00</span>
+                        </div>
+                    </a>
+                    <!-- 4個目 -->
+                    <a href="#" class="new-recipe-item">
+                        <img src="images/news/new_4.png" alt="シュガーパールが乗ったエディブルフラワー入りゼリー" class="new-recipe-item-image">
+                        <h3 class="new-recipe-item-title">映えるお花入りブルーゼリー</h3>
+                        <div class="new-recipe-item-bottom">
+                            <span class="new-recipe-item-category">スイーツ</span>
+                            <span class="new-recipe-item-date">2022.07.00</span>
+                        </div>
+                    </a>
+                </div>
+                <a href="#" class="button button-pink-ghost">もっと見る</a>
+            </div>
+        </section>
+
+        <!-- 特徴 -->
+        <section class="feature">
+            <div class="container">
+                <!-- サムネイル -->
+                <div class="feature-thumbnail">
+                    <h2 class="feature-thumbnail-title">
+                        <img src="images/feature/feature_title.png" alt="Feature" class="feature-thumbnail-title-image">
+                    </h2>
+                    <img src="images/feature/feature.png" class="feature-thumbnail-image" alt="おすすめ料理の特徴">
+                </div>
+                <!-- テキスト -->
+                <div class="feature-body">
+                    <h3 class="feature-body-title">豚肉のスタミナ味噌炒め</h3>
+                    <p>フライパンにゴマ油、人参、豚肉、チンゲン菜などの香味野菜の順に加え、甘辛くて食欲をそそる豆板醬入り味噌ダレを入れて軽く炒めます。</p>
+                    <h4 class="feature-body-point">POINT</h4>
+                    <p>調味料を別ボウルで混ぜておき、炒める際にさっと加え強火で手早く炒めましょう。ビタミン、ミネラルがしっかりとれて夏バテ防止にピッタリです！</p>
+                    <a href="#" class="button button-white-ghost">もっと見る</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ランキング -->
+        <section class="ranking">
+            <div class="container">
+                <h2 class="section-title">
+                    <img src="images/ranking/ranking_title.png" alt="Ranking" class="section-title-en">
+                    <span class="section-title-jp">ランキング</span>
+                </h2>
+                <ol class="ranking-list-group">
+                    <!-- 1個目 -->
+                    <li>
+                        <a href="#" class="ranking-list-group-item">
+                            <div class="ranking-thumbnail">
+                                <img src="images/ranking/ranking_1_badge.png" alt="No.1"
+                                    class="ranking-thumbnail-badge">
+                                <img src="images/ranking/ranking_1.png" alt="カラフルなキャンディ">
+                            </div>
+                            <div class="ranking-body">
+                                <h3 class="ranking-body-title">2022年上半期バズりレシピTOP10</h3>
+                                <div class="ranking-body-inner">
+                                    <span class="ranking-body-category">全ジャンル</span>
+                                    <span class="ranking-body-date">2022.07.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 2個目 -->
+                    <li>
+                        <a href="#" class="ranking-list-group-item">
+                            <div class="ranking-thumbnail">
+                                <img src="images/ranking/ranking_2_badge.png" alt="No.2"
+                                    class="ranking-thumbnail-badge">
+                                <img src="images/ranking/ranking_2.png" alt="カラフルシュガーでデコレートしたフルーツアイスクリーム">
+                            </div>
+                            <div class="ranking-body">
+                                <h3 class="ranking-body-title">真夏に食べたい！冷たいデザート</h3>
+                                <div class="ranking-body-inner">
+                                    <span class="ranking-body-category">スイーツ</span>
+                                    <span class="ranking-body-date">2022.07.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 3個目 -->
+                    <li>
+                        <a href="#" class="ranking-list-group-item">
+                            <div class="ranking-thumbnail">
+                                <img src="images/ranking/ranking_3_badge.png" alt="No.3"
+                                    class="ranking-thumbnail-badge">
+                                <img src="images/ranking/ranking_3.png" alt="茄子とひき肉の味噌炒め">
+                            </div>
+                            <div class="ranking-body">
+                                <h3 class="ranking-body-title">暑さを乗り切ろう、夏バテ対策おすすめレシピ</h3>
+                                <div class="ranking-body-inner">
+                                    <span class="ranking-body-category">全ジャンル</span>
+                                    <span class="ranking-body-date">2022.07.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 4個目 -->
+                    <li>
+                        <a href="#" class="ranking-list-group-item">
+                            <div class="ranking-thumbnail">
+                                <img src="images/ranking/ranking_4.png" alt="焼きプリン">
+                            </div>
+                            <div class="ranking-body">
+                                <h3 class="ranking-body-title">親子でつくる大人気おやつ</h3>
+                                <div class="ranking-body-inner">
+                                    <span class="ranking-body-category">スイーツ</span>
+                                    <span class="ranking-body-date">2022.07.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 5個目 -->
+                    <li>
+                        <a href="#" class="ranking-list-group-item">
+                            <div class="ranking-thumbnail">
+                                <img src="images/ranking/ranking_5.png" alt="肉じゃが">
+                            </div>
+                            <div class="ranking-body">
+                                <h3 class="ranking-body-title">レンジで即完成！定番おかず5選/2022年上半期・大注目レシピTOP10</h3>
+                                <div class="ranking-body-inner">
+                                    <span class="ranking-body-category">全ジャンル</span>
+                                    <span class="ranking-body-date">2022.07.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- レシピ検索 -->
+        <section class="search">
+            <div class="container">
+                <div class="search-title">
+                    <h2 class="section-title">
+                        <img src="images/search/search_title.png" alt="Search" class="section-title-en">
+                        <span class="section-title-jp">レシピ検索</span>
+                    </h2>
+                    <a href="#" class="search-more"><i class="bi bi-caret-right-fill"></i>もっと見る</a>
+                </div>
+                <!-- リンク -->
+                <ul class="search-category">
+                    <li><a href="#" class="button button-pink-ghost">栄養バランス</a></li>
+                    <li><a href="#" class="button button-pink-ghost">ケータリング</a></li>
+                    <li><a href="#" class="button button-pink-ghost">時短・簡単</a></li>
+                    <li><a href="#" class="button button-pink-ghost">イベントレシピ</a></li>
+                    <li><a href="#" class="button button-pink-ghost">健康・美容</a></li>
+                    <li><a href="#" class="button button-pink-ghost">おやつ</a></li>
+                    <li><a href="#" class="button button-pink-ghost">お弁当おかず</a></li>
+                    <li><a href="#" class="button button-pink-ghost">10分で完成</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+
+        <!-- コンテナ -->
+        <div class="container footer-container">
+
+            <div class="footer-container-pc-left">
+                <!-- タイトル -->
+                <h2 class="footer-title">
+                    <img src="images/footer/footer_logo .png" alt="Kirameki Kitchen" class="footer-title-image">
+                </h2>
+                <!-- ナビゲーション -->
+                <div class="footer-nav-container">
+                    <nav>
+                        <ul class="footer-nav-list">
+                            <li class="footer-nav-list-item"><a href="#">レシピ一覧</a></li>
+                            <li class="footer-nav-list-item"><a href="#">特集</a></li>
+                            <li class="footer-nav-list-item"><a href="#">ランキング</a></li>
+                            <li class="footer-nav-list-item"><a href="#">運営会社</a></li>
+                            <li class="footer-nav-list-item"><a href="#">お問い合わせ</a></li>
+                            <li class="footer-nav-list-item"><a href="#">利用規約</a></li>
+                            <li class="footer-nav-list-item"><a href="#">プライバシーポリシー</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="footer-container-pc-right">
+                <!-- SNSリスト -->
+                <ul class="footer-sns-list">
+                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                </ul>
+                <!-- コピーライト -->
+                <p class="footer-copyright">Copyright &copy; 2022Recipe Me! All Rights Reserved.</p>
+            </div>
+        </div>
+
+        <!-- TO TOPボタン -->
+        <a href="#" class="button-to-top"><i class="bi bi-arrow-up-short"></i></a>
+
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
