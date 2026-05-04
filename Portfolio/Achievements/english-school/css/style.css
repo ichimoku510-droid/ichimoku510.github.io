@@ -1,0 +1,3087 @@
+@charset "UTF-8";
+
+/* ページ全体のスタイル
+------------------------------------------ */
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.75;
+    color: #333;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+/* 文字
+-------------------------------------------- */
+.text-big {
+    font-size: 1.5rem;
+}
+
+@media(min-width: 768px) {
+    .text-big {
+        font-size: 2.75rem;
+    }
+}
+
+.text-yellow {
+    color: #f2a118;
+}
+
+.text-green {
+    color: #46c017;
+}
+
+.text-orange {
+    color: #f26618;
+}
+
+/* 部品
+-------------------------------------------- */
+
+/* flexbox */
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Outfitフォント */
+.outfit {
+    font-family: Outfit, sans-serif;
+}
+
+/* セクションタイトル */
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.55rem;
+    color: #000;
+    row-gap: 0.375rem;
+}
+
+/* セクションタイトル下線 */
+.section-title-border {
+    width: 1.5rem;
+    content: "";
+    border-top: solid 0.125rem #0079f2;
+}
+
+@media(min-width: 768px) {
+    .section-title-border {
+        margin-left: 0.1313rem;
+        width: 2.3125rem;
+        border-top: solid 0.188rem #0079f2;
+    }
+}
+
+/* contact */
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #333;
+    row-gap: 1.1rem;
+    background-color: #f2f8fe;
+}
+
+@media(min-width: 768px) {
+    .contact {
+        row-gap: 2.25rem;
+    }
+}
+
+.contact-text {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+@media(min-width: 768px) {
+    .contact-text {
+        font-size: 1.875rem;
+    }
+}
+
+/* ボタンの共通スタイル */
+.button {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 17.5rem;
+    padding-top: 1.09rem;
+    padding-bottom: 1.3rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    border-radius: 1.875rem;
+    white-space: nowrap;
+}
+
+@media(min-width: 768px) {
+    .button {
+        max-width: 19.875rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+}
+
+.button-icon {
+    position: absolute;
+    line-height: 1;
+    font-size: 1.7rem;
+    right: 1rem;
+    transform: translate(0%, -12%);
+}
+
+/* ピンク色ボタン */
+.button-pink {
+    color: #fff;
+    background-color: #f11f8d;
+    border: 0.0625rem solid #f11f8d;
+}
+
+.button-pink:hover {
+    color: #f11f8d;
+    background-color: #fff;
+}
+
+/* ヘッダー
+-------------------------------------------- */
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.125rem;
+    margin: 0.5rem 0.5rem 0;
+    padding: 0.65rem 2rem 0.65rem 1.65rem;
+    background-color: #0079f2;
+    border-radius: 2.0625rem;
+}
+
+@media (min-width: 768px) {
+    .header {
+        top: 0.5rem;
+        height: 5rem;
+        padding: 0.65rem 0.9rem 0.65rem 2.5rem;
+        border-radius: 3rem;
+    }
+}
+
+/* ロゴ */
+.header-logo {
+    line-height: 1;
+}
+
+@media (min-width: 768px) {
+    .header-logo {
+        padding-top: 0.08rem;
+    }
+}
+
+.header-logo img {
+    width: 82%;
+    max-width: 12.0625rem;
+    vertical-align: baseline;
+}
+
+@media (min-width: 768px) {
+    .header-logo img {
+        width: 100%;
+    }
+}
+
+/* ハンバーガーボタン */
+.hamburger-button {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 1rem;
+    margin-bottom: 0.13rem;
+}
+
+@media(min-width: 768px) {
+    .hamburger-button {
+        display: none;
+    }
+}
+
+.hamburger-button-bar {
+    width: 1.5rem;
+    height: 0.13rem;
+    background-color: #fff;
+}
+
+/* ハンバーガーメニュー、ヘッダーナビ
+-------------------------------------------------------- */
+
+@media (max-width: 767.98px) {
+    .hamburger-menu {
+        position: fixed;
+        top: 10.2%;
+        left: 0.5rem;
+        right: 0.5rem;
+        height: calc(100vh - 5.5rem);
+        max-height: 32.6875rem;
+        margin: auto;
+        padding: 3rem 3rem;
+        background-color: #0079f2;
+        text-align: center;
+        transition: all .6s;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 2rem;
+    }
+}
+
+/* アクティブ状態 */
+.hamburger-menu-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ナビゲーション */
+.hamburger-menu-nav-list-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.4rem;
+    padding-right: 0.1rem;
+    font-size: 1.12rem;
+    font-weight: 700;
+    row-gap: 2.48rem;
+    line-height: 1;
+}
+
+.hamburger-menu-nav-list-group a {
+    color: #fff;
+}
+
+@media(min-width: 768px) {
+    .header-nav-list-group {
+        flex-direction: row;
+        column-gap: 2rem;
+        height: 100%;
+        margin: 0;
+        padding-bottom: 0.1875rem;
+        padding-right: 1.6rem;
+        font-size: 0.9375rem;
+        font-weight: 900;
+        line-height: 1;
+    }
+}
+
+@media(min-width: 980px) {
+    .header-nav-list-group {
+        column-gap: 2.33rem;
+    }
+}
+
+/* ハンバーガーメニュー内ピンク色ボタン */
+.hamburger-menu .button {
+    padding-bottom: 1.2rem;
+    line-height: 1.1;
+    letter-spacing: -0.0625rem;
+}
+
+@media(min-width: 768px) {
+    .hamburger-menu .button-pink {
+        display: none;
+    }
+}
+
+.hamburger-menu .button-icon {
+    right: 0.9rem;
+}
+
+/* SNSリスト */
+.hamburger-menu-sns-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.15rem;
+    margin-right: 0.3125rem;
+    padding-left: 0.9rem;
+    padding-right: 0.8rem;
+    column-gap: 2.6rem;
+}
+
+@media(min-width: 768px) {
+    .hamburger-menu-sns-list {
+        display: none;
+    }
+}
+
+.hamburger-menu-sns-list i {
+    display: block;
+    font-size: 1.9688rem;
+    color: #fff;
+}
+
+/* カバー
+---------------------------------------------- */
+.cover {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2.475rem;
+}
+
+@media(min-width: 768px) {
+    .cover {
+        margin-bottom: 4.5rem;
+    }
+}
+
+/* カバー画像 */
+.cover-slick-image {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cover-pickup-image {
+    width: 92.9vw;
+    border-bottom-left-radius: 6.25rem;
+}
+
+@media (min-width: 768px) {
+    .cover-pickup-image {
+        width: 82.7vw;
+        border-bottom-left-radius: 9.375rem;
+    }
+}
+
+/* ピックアップ */
+.cover-pickup {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0.95rem;
+    left: 7%;
+    row-gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .cover-pickup {
+        left: 9.85%;
+        bottom: 16.8%;
+        row-gap: 1rem;
+    }
+}
+
+.cover-catch {
+    display: flex;
+    width: fit-content;
+    height: auto;
+    padding: 0.25rem 1.55rem 0.5rem 1rem;
+    font-size: 1.25rem;
+    font-family: "Noto Sans JP";
+    font-weight: 700;
+    color: #000;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 768px) {
+    .cover-catch {
+        display: inline-block;
+        align-self: start;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding: 0 1.5rem 0.6rem 1rem;
+        font-size: 2.25rem;
+    }
+}
+
+/* slick1 */
+.slick-1 .cover-pickup {
+    bottom: 0.95rem;
+    row-gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .slick-1 .cover-pickup {
+        bottom: 16.85%;
+        row-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .slick-1 .cover-catch:first-child {
+        padding: 0.15rem 1.2rem 0.5rem 1rem;
+        letter-spacing: -0.5rem;
+    }
+}
+
+/* 話せる！ */
+@media (min-width: 768px) {
+    .slick-1 .cover-catch:first-child span:first-child {
+        letter-spacing: 0.09rem;
+    }
+}
+
+/* 楽しい！ */
+@media (min-width: 768px) {
+    .slick-1 .cover-catch:first-child span:last-child {
+        letter-spacing: 0.1rem;
+    }
+}
+
+/* kira-Kira */
+.slick-1 .cover-catch:last-child span {
+    margin-right: 0.1938rem;
+}
+
+@media (min-width: 768px) {
+    .slick-1 .cover-catch:last-child span {
+        letter-spacing: 0.045rem;
+        margin-right: 0.4rem;
+    }
+}
+
+/* English */
+.slick-1 .cover-catch:last-child {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    padding: 0.55rem 1rem 0.65rem 1.05rem;
+}
+
+@media (min-width: 768px) {
+    .slick-1 .cover-catch:last-child {
+        font-family: 'Poppins Bold';
+        letter-spacing: 0.03rem;
+        padding: 0.6rem 1.45rem 0.95rem 1rem;
+    }
+}
+
+/* slick2 */
+.slick-2 .cover-catch {
+    padding: 0.95rem 1.25rem 0.8rem 1rem;
+    line-height: 1.3;
+}
+
+.slick-2 .cover-catch:first-child {
+    padding: 0.4rem 1.2rem 0.25rem 1.05rem;
+    line-height: 2.2;
+}
+
+@media (min-width: 768px) {
+    .slick-2 .cover-catch:first-child {
+        padding: 1.65rem 1.6rem 1.55rem 1rem;
+        line-height: 1;
+    }
+}
+
+.slick-2 .cover-catch:first-child span {
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .slick-2 .cover-catch:first-child span {
+        line-height: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .slick-2 .cover-catch:last-child {
+        padding: 1.3rem 1.8rem 1.2rem 1rem;
+        letter-spacing: 0.003rem;
+        line-height: 1.3;
+    }
+}
+
+.slick-2 .cover-catch:last-child span {
+    line-height: 0.8;
+}
+
+@media (min-width: 768px) {
+    .slick-2 .cover-catch:last-child span {
+        line-height: 0;
+    }
+}
+
+/* slck3 */
+@media (min-width: 768px) {
+    .slick-3 .cover-pickup {
+        row-gap: 1rem;
+    }
+}
+
+.slick-3 .cover-catch {
+    padding-right: 1.05rem;
+}
+
+.slick-3 .cover-catch:first-child {
+    padding: 0.15rem 1rem 0.1rem 1.05rem;
+    line-height: 2.5;
+}
+
+@media (min-width: 768px) {
+    .slick-3 .cover-catch:first-child {
+        padding: 0.1rem 1.8rem 0.4rem 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+.slick-3 .cover-catch:first-child span {
+    line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+    .slick-3 .cover-catch:last-child {
+        padding: 0.05rem 1.8rem 0.9rem 0.95rem;
+        line-height: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .slick-3 .cover-catch:last-child span {
+        font-size: 2.25rem;
+    }
+}
+
+/* slick4 */
+.slick-4 .cover-catch {
+    padding: 0.2rem 1.05rem 0.05rem 1.05rem;
+    line-height: 2.5;
+}
+
+@media (min-width: 768px) {
+    .slick-4 .cover-catch:first-child {
+        padding: 0rem 1.55rem 0.05rem 0.95rem;
+        line-height: 2.3;
+    }
+}
+
+.slick-4 .cover-catch:first-child span {
+    line-height: 1.9;
+}
+
+@media (min-width: 768px) {
+    .slick-4 .cover-catch:first-child span {
+        letter-spacing: 0rem;
+    }
+}
+
+.slick-4 .cover-catch:last-child {
+    padding: 0.2rem 1.15rem 0.05rem 1.05rem;
+    line-height: 2.5;
+}
+
+@media (min-width: 768px) {
+    .slick-4 .cover-catch:last-child {
+        padding: 0.15rem 1.75rem 0.35rem 1rem;
+        letter-spacing: 0.01rem;
+        line-height: 1;
+    }
+}
+
+.slick-4 .cover-catch:last-child span {
+    line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+    .slick-4 .cover-catch:last-child span {
+        letter-spacing: 0rem;
+    }
+}
+
+/* slick5 */
+.slick-5 .cover-catch {
+    padding: 0.65rem 1rem 0.5rem 1.05rem;
+    line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+    .slick-5 .cover-catch:first-child {
+        padding: 0.2rem 1.5rem 0.55rem 1rem;
+        letter-spacing: 0rem;
+        line-height: 1.9;
+    }
+}
+
+.slick-5 .cover-catch:first-child span {
+    line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+    .slick-5 .cover-catch:first-child span {
+        letter-spacing: 0rem;
+        line-height: 1.73;
+    }
+}
+
+.slick-5 .cover-catch:last-child {
+    padding: 0.45rem 1rem 0.3rem;
+}
+
+@media (min-width: 768px) {
+    .slick-5 .cover-catch:last-child {
+        padding: 0.45rem 1.65rem 0.1rem 1rem;
+        line-height: 2.2;
+    }
+}
+
+.slick-5 .cover-catch:last-child span:first-child {
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .slick-5 .cover-catch:last-child span:first-child {}
+}
+
+.slick-5 .cover-catch:last-child span:last-child {
+    letter-spacing: 0.0125rem;
+    line-height: 2.1;
+}
+
+@media (min-width: 768px) {
+    .slick-5 .cover-catch:last-child span:last-child {}
+}
+
+/* Slickドット */
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots {
+    right: 0.0375rem;
+    bottom: -1.75rem;
+}
+
+@media (min-width: 768px) {
+    .slick-dots {
+        display: flex;
+        justify-content: end;
+        right: 1.459rem;
+        bottom: -2.25rem;
+    }
+}
+
+.slick-dots li {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0.667rem 0.685rem;
+}
+
+.slick-dots li button {
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #000;
+}
+
+.slick-dots li button:before {
+    width: 0.5rem;
+    height: 0.5rem;
+    line-height: normal;
+    border-radius: 50%;
+    opacity: 0.25;
+    font-size: 0.5rem !important;
+}
+
+/* .contact部分 */
+.cover-contact {
+    margin-top: 3rem;
+    font-size: 1.125rem;
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .cover-contact {
+        margin-top: 3.1rem;
+        letter-spacing: 0.0063rem;
+        row-gap: 1.55rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .cover-contact .contact-text {
+        margin-left: 1.625rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .cover-contact .contact-text span {
+        display: inline-block;
+    }
+}
+
+/* ボタンCSS */
+@media (min-width: 768px) {
+    .cover-contact .button {
+        padding-top: 1.1rem;
+        padding-bottom: 1.3rem;
+    }
+}
+
+/* キャンペーン
+---------------------------------------------- */
+.campaign {
+    width: 100%;
+    margin-bottom: 2.95rem;
+    padding-top: 1.9375rem;
+    padding-bottom: 2rem;
+    background-color: #f2f8fe;
+}
+
+@media (min-width: 980px) {
+    .campaign {
+        flex-direction: row;
+        align-items: normal;
+        justify-content: center;
+        margin-bottom: 4.6rem;
+        padding: 3.875rem 0.35rem 3.375rem 0.25rem;
+        column-gap: 3.7rem;
+    }
+}
+
+.campaign-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 980px) {
+    .campaign-top {
+        align-items: baseline;
+        row-gap: 0.55rem;
+        margin-bottom: 0;
+    }
+}
+
+/* ランキングNo.1 */
+.campaign-top-item {
+    display: flex;
+    margin-top: 0.05rem;
+    column-gap: 0.9rem;
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item {
+        padding-left: 0.1rem;
+        column-gap: 0.95rem;
+    }
+}
+
+.campaign-top-item-left,
+.campaign-top-item-right {
+    display: flex;
+}
+
+/* 画像 */
+.campaign-top-item img {
+    width: 2.5rem;
+    height: 7rem;
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item img {
+        width: 4rem;
+        height: 10rem;
+    }
+}
+
+/* テキスト */
+.campaign-top-item-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0.6rem 0 0.4rem 0.05rem;
+    line-height: 0.5;
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item-text {
+        padding: 0.2rem 0 0.25rem 0.05rem;
+        gap: 0.1rem;
+    }
+}
+
+/* 2021年度 */
+.campaign-top-item-text p:first-child {
+    color: #555;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item-text p:first-child {
+        font-size: 1rem;
+    }
+}
+
+/* オンライン教室ランキング */
+.campaign-top-item-text p:nth-of-type(2) {
+    padding-top: 0.35rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.8;
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item-text p:nth-of-type(2) {
+        font-size: 1.25rem;
+        margin-top: 0.2rem;
+        line-height: 1.69;
+    }
+}
+
+/* 教室ランキング */
+@media (min-width: 980px) {
+    .campaign-top-item-text p:nth-of-type(2) span {
+        line-height: 1.75;
+    }
+}
+
+/* No.1 ※1 */
+.campaign-top-item-text p:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    letter-spacing: 0.0063rem;
+    line-height: 0.98;
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item-text p:last-child {
+        align-items: baseline;
+        margin-left: 0.15rem;
+        line-height: 0.97;
+    }
+}
+
+/* No. */
+.campaign-top-item-text p:last-child span:first-child {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1.3;
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item-text p:last-child span:first-child {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+}
+
+/* 1 */
+.campaign-top-item-text p:last-child span:nth-of-type(2) {
+    margin-bottom: 0.2rem;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: -0.2813rem;
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item-text p:last-child span:nth-of-type(2) {
+        font-size: 3.75rem;
+    }
+}
+
+/* ※1 */
+.campaign-top-item-text p:last-child span:last-child {
+    color: #666;
+    font-size: 0.625rem;
+    margin-left: 0.2188rem;
+    line-height: 2.9;
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item-text p:last-child span:last-child {
+        font-size: 0.75rem;
+        margin-left: 0.1437rem;
+        line-height: 2.15;
+    }
+}
+
+/* ランキング右側 */
+.campaign-top-item-right img:first-child {
+    padding-left: 0.1rem;
+}
+
+.campaign-top-item-right .campaign-top-item-text {
+    margin-left: 0.075rem;
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item-right .campaign-top-item-text {
+        margin-left: 0.1313rem;
+        padding: 0.7rem 0 0.6rem 0.05rem;
+        line-height: 0.35;
+    }
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item-right .campaign-top-item-text p:nth-of-type(2) {
+        margin-top: 0.2rem;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 980px) {
+    .campaign-top-item-right .campaign-top-item-text p:last-child {
+        margin-left: 0;
+    }
+}
+
+/* 注釈文 */
+.campaign-top-footnote {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+@media (min-width: 980px) {
+    .campaign-top-footnote {
+        padding-left: 0.1rem;
+    }
+}
+
+/* SP表示位置の調整 */
+@media (max-width: 767.98px) {
+    .campaign-top-footnote {
+        text-align: center;
+    }
+}
+
+/* 期間限定 */
+.campaign-contact {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f11f8d;
+    row-gap: 0.3rem;
+}
+
+@media (min-width: 980px) {
+    .campaign-contact {
+        width: auto;
+        font-size: 1.5rem;
+        margin-top: 0.125rem;
+        row-gap: 0.5rem;
+    }
+}
+
+.campaign-contact-catch {
+    display: flex;
+}
+
+@media (min-width: 980px) {
+    .campaign-contact-catch {
+        margin-right: 0.1rem;
+    }
+}
+
+.slash-left,
+.slash-right {
+    width: 1.875rem;
+    height: 0.125rem;
+    margin-top: 1.1rem;
+    content: "";
+    border-top: solid 0.125rem #f11f8d;
+}
+
+.slash-left {
+    transform: rotate(240deg);
+}
+
+@media (min-width: 980px) {
+    .slash-left {
+        margin-right: 0.8rem;
+    }
+}
+
+.slash-right {
+    transform: rotate(120deg);
+    margin-left: 0.0625rem;
+}
+
+@media (min-width: 980px) {
+    .slash-right {
+        margin-left: 0.6rem;
+    }
+}
+
+/* キャンペーンボタン */
+.button-white-ghost {
+    color: #f11f8d;
+    background-color: #fff;
+    max-width: 19.875rem;
+    padding-top: 1rem;
+    padding-bottom: 1.25rem;
+    border: 0.15rem solid #f11f8d;
+}
+
+@media (min-width: 980px) {
+    .button-white-ghost {
+        max-width: none;
+        width: 21.8rem;
+        margin-left: 0.1rem;
+        padding-top: 1.5rem;
+        padding-right: 0.1rem;
+        padding-bottom: 1.55rem;
+        font-size: 1.4375rem;
+        letter-spacing: 0.0063rem;
+        border-radius: 2.375rem;
+    }
+}
+
+.button-white-ghost:hover {
+    color: #fff;
+    background-color: #f11f8d;
+}
+
+.button-white-ghost .button-icon {
+    right: 0.75rem;
+    transform: translate(0%, -8%);
+}
+
+@media (min-width: 980px) {
+    .button-white-ghost .button-icon {
+        right: 1.03rem;
+    }
+}
+
+/* コース案内 
+--------------------------------------------------*/
+.course {
+    margin-bottom: 4.2rem;
+}
+
+/* セクションタイトル */
+.course .section-title {
+    margin-top: 1.45rem;
+    margin-right: 0.1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.02rem;
+    font-size: 1.5rem;
+    row-gap: 0.4rem;
+}
+
+@media (min-width: 768px) {
+    .course .section-title {
+        margin-top: 1.35rem;
+        margin-right: 0.1875rem;
+        margin-bottom: 2.45rem;
+        font-size: 2.25rem;
+        letter-spacing: 0.0313rem;
+        row-gap: 0.6rem;
+    }
+}
+
+/* タブ */
+.st-theme-basic {
+    width: 92%;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .st-theme-basic {
+        max-width: 67.5rem;
+    }
+}
+
+/* タブナビゲーション */
+.tab.st>.nav {
+    height: 4.0625rem;
+    column-gap: 0.5rem;
+    flex-direction: row !important;
+}
+
+@media (min-width: 768px) {
+    .tab.st>.nav {
+        height: 5.05rem;
+        column-gap: 1.46rem;
+    }
+}
+
+.tab.st-theme-basic>.nav {
+    box-shadow: none;
+}
+
+.tab.st-theme-basic>.nav .nav-link {
+    padding-top: 1.4rem;
+    padding-left: 1.0625rem;
+    letter-spacing: 0.0125rem;
+    line-height: 1;
+    background-color: #f0f0f0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #333;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+@media (min-width: 768px) {
+    .tab.st-theme-basic>.nav .nav-link {
+        padding-top: 1.55rem;
+        font-size: 1.6rem;
+    }
+}
+
+.tab.st-theme-basic>.nav li:not(:first-child) .nav-link {
+    padding-left: 1.1rem;
+    letter-spacing: 0.08rem;
+}
+
+@media (min-width: 768px) {
+    .tab.st-theme-basic>.nav li:not(:first-child) .nav-link {
+        padding-left: 1rem;
+        letter-spacing: 0rem;
+    }
+}
+
+/* アクティブ状態 */
+.tab.st-theme-basic>.nav .nav-link.active {
+    color: #fff !important;
+    background-color: #f2a118;
+}
+
+.tab.st-theme-basic>.nav .nav-link.active::after {
+    background-color: unset !important;
+}
+
+/* タブコンテンツ */
+.tab-content {
+    text-align: center;
+    background-color: #ffedcc;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .tab-content {
+        margin-bottom: 0.85rem;
+    }
+}
+
+.tab.st-theme-basic>.tab-content>.tab-pane {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1.95rem;
+    margin: 1rem;
+    padding: 1.5rem 1.5rem 1.25rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .tab.st-theme-basic>.tab-content>.tab-pane {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1.5rem;
+        padding: 1.45rem 1.5rem 1.4rem;
+        gap: 1.5rem;
+    }
+}
+
+.tab.st-theme-basic>.tab-content>.tab-pane:not(:nth-of-type(2)) {
+    padding-bottom: 1.15rem;
+}
+
+@media (min-width: 768px) {
+    .tab.st-theme-basic>.tab-content>.tab-pane:not(:nth-of-type(2)) {
+        padding-bottom: 1.4rem;
+    }
+}
+
+.course-tab-content-item {
+    width: 100%;
+}
+
+/* イメージ画像 */
+.course-tab-content-item img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    #tab-1 .course-tab-content-item:last-child img {
+        margin-bottom: 0.4rem;
+    }
+}
+
+/* コース名 */
+.course-tab-content-title {
+    padding-top: 0.05rem;
+    padding-left: 0.1rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.01rem;
+    line-height: 1.35;
+}
+
+@media (min-width: 768px) {
+    .course-tab-content-title {
+        font-size: 1.5rem;
+        padding-top: 0.55rem;
+        line-height: 1.05;
+    }
+}
+
+.tab-content .course-tab-content-item:last-child .course-tab-content-title {
+    padding-top: 0.15rem;
+}
+
+/* 対象学年 */
+.course-tab-content-title span {
+    padding-right: 0.2rem;
+    font-size: 1.0688rem;
+    letter-spacing: -0.0688rem;
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .course-tab-content-title span {
+        font-size: 1.15rem;
+        letter-spacing: -0.04rem;
+    }
+}
+
+.tab-content .course-tab-content-item:last-child .course-tab-content-title span {
+    padding-top: 0.65rem;
+}
+
+/* タブ2 */
+#tab-2 {
+    row-gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+    #tab-2 {
+        align-items: normal;
+        padding: 1.45rem 1.5rem 1.2rem;
+    }
+}
+
+/* 低学年コース */
+#tab-2 .course-tab-content-item:first-child .course-tab-content-title {
+    padding-top: 0.15rem;
+}
+
+@media (min-width: 768px) {
+    #tab-2 .course-tab-content-item:first-child .course-tab-content-title {
+        padding-top: 0.55rem;
+    }
+}
+
+/* 高学年コース */
+#tab-2 .course-tab-content-item:nth-of-type(2) .course-tab-content-title {
+    padding-top: 0.2rem;
+}
+
+@media (min-width: 768px) {
+    #tab-2 .course-tab-content-item:nth-of-type(2) .course-tab-content-title {
+        padding-top: 0.55rem;
+        padding-right: 0.1rem;
+    }
+}
+
+#tab-2 .course-tab-content-item:last-child .course-tab-content-title {
+    padding-top: 0.1rem;
+    line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+    #tab-2 .course-tab-content-item:last-child .course-tab-content-title {
+        padding-top: 0.6rem;
+        padding-right: 0.1rem;
+        line-height: 1.1;
+    }
+}
+
+/* タブ3 */
+#tab-3 {
+    row-gap: 1.7rem;
+}
+
+@media (min-width: 768px) {
+    #tab-3 {
+        align-items: normal;
+        padding: 1.45rem 1.5rem 1.2rem;
+    }
+}
+
+#tab-3 .course-tab-content-title {
+    /* margin-bottom: 0.05rem; */
+    padding-top: 0.15rem;
+    padding-left: 0;
+}
+
+/* 中学基礎コース */
+@media (min-width: 768px) {
+    #tab-3 .course-tab-content-item:first-child .course-tab-content-title {
+        padding-top: 0.55rem;
+        line-height: 1.1;
+    }
+}
+
+#tab-3 .course-tab-content-item span {
+    padding-right: 0.1rem;
+}
+
+/* 中学応用コース */
+#tab-3 .course-tab-content-item:nth-of-type(2) .course-tab-content-title {
+    /* padding-top: 0.1rem; */
+    line-height: 1.42;
+}
+
+@media (min-width: 768px) {
+    #tab-3 .course-tab-content-item:nth-of-type(2) .course-tab-content-title {
+        padding-top: 0.55rem;
+        line-height: 1.1;
+    }
+}
+
+/* 英検受験上級コース */
+#tab-3 .course-tab-content-item:last-child .course-tab-content-title {
+    padding-top: 0.15rem;
+    padding-left: 0.1rem;
+    line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+    #tab-3 .course-tab-content-item:last-child .course-tab-content-title {
+        padding-top: 0.6rem;
+        padding-left: 0;
+        line-height: 1.1;
+    }
+}
+
+/* contact */
+.course-contact {
+    margin-top: 5.1rem;
+    row-gap: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    .course-contact {
+        margin-top: 5.15rem;
+        row-gap: 1.3rem;
+    }
+}
+
+.couse-contact-catch {
+    padding-top: 1.5rem;
+    padding-right: 0.4rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .couse-contact-catch {
+        padding-top: 1.9rem;
+        padding-right: 0;
+        font-size: 1.25rem;
+    }
+}
+
+.course-contact .button {
+    margin-bottom: 2rem;
+    padding-top: 1.05rem;
+    padding-bottom: 1.3rem;
+}
+
+@media (min-width: 768px) {
+    .course-contact .button {
+        margin-bottom: 2.55rem;
+        padding-top: 1.05rem;
+        padding-bottom: 1.35rem;
+    }
+}
+
+.course-contact .button-icon {
+    transform: translate(0%, -8%);
+}
+
+/* 3つの特色
+----------------------------------------------------- */
+.three-point {
+    margin-bottom: 4.6rem;
+}
+
+/* セクションタイトル */
+.three-point .section-title {
+    margin-bottom: 2rem;
+    row-gap: 0.45rem;
+    letter-spacing: -0.015rem;
+    line-height: 1.696;
+}
+
+@media (min-width: 768px) {
+    .three-point .section-title {
+        margin-top: 1.75rem;
+        margin-bottom: 2.45rem;
+        padding-right: 0.05rem;
+        font-size: 2.25rem;
+        letter-spacing: 0.009rem;
+        line-height: 1.75;
+        row-gap: 0.68rem;
+    }
+}
+
+/* コンテンツ部分 */
+.three-point-list {
+    width: 92.4%;
+    margin-bottom: 2.4rem;
+    padding-right: 0.15rem;
+}
+
+@media (min-width: 768px) {
+    .three-point-list {
+        display: flex;
+        flex-direction: column;
+        max-width: 64.8413rem;
+        margin-bottom: 5.65rem;
+        row-gap: 2.6875rem;
+    }
+}
+
+.three-point-list-item {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .three-point-list-item {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .three-point-list-item:not(:nth-of-type(2)) {
+        flex-direction: row-reverse;
+    }
+}
+
+/* イメージ画像 */
+.three-point-thumbnail {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .three-point-thumbnail {
+        width: 47.6%;
+        height: 100%;
+    }
+}
+
+.three-point-list>li:not(:last-child) .three-point-thumbnail {
+    margin-left: 0.15rem;
+}
+
+@media (min-width: 768px) {
+    .three-point-list>li:not(:last-child) .three-point-thumbnail {
+        margin-left: 0;
+        margin-right: 0.1rem;
+    }
+}
+
+.point-2 .three-point-thumbnail {
+    margin-top: 0.1rem;
+}
+
+@media (min-width: 768px) {
+    .point-2 .three-point-thumbnail {
+        margin-top: 0;
+    }
+}
+
+.point-3 .three-point-thumbnail {
+    margin-top: 0.1437rem;
+}
+
+@media (min-width: 768px) {
+    .point-3 .three-point-thumbnail {
+        margin-top: 0.165rem;
+    }
+}
+
+/* ページ読み込み直後にフェードイン要素を非表示にする */
+.js-fadein-left,
+.js-fadein-right {
+    opacity: 0;
+}
+
+/* テキスト */
+.three-point-body {
+    text-align: start;
+    margin-bottom: 2.2rem;
+}
+
+@media (min-width: 768px) {
+    .three-point-body {
+        display: flex;
+        width: 52.5%;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2.2rem;
+        gap: 0.15rem;
+    }
+}
+
+.three-point-body h3 {
+    margin-top: 0.7rem;
+    padding-left: 0.05rem;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 3.7rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+@media (min-width: 768px) {
+    .three-point-body h3 {
+        margin-top: 2.2rem;
+        padding-bottom: 0.1rem;
+        font-size: 4.95rem;
+    }
+}
+
+.three-point-body p {
+    padding-left: 0.05rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.67;
+    letter-spacing: -0.03rem;
+}
+
+@media (min-width: 768px) {
+    .three-point-body p {
+        max-width: 91%;
+        margin-left: 0.125rem;
+        font-size: 1.5rem;
+        letter-spacing: -0.0375rem;
+        line-height: 1.75;
+    }
+}
+
+/* ポイント1 */
+.point-1 .three-point-body p {
+    line-height: 1.675;
+    letter-spacing: -0.028rem;
+}
+
+@media (min-width: 768px) {
+    .point-1 .three-point-body p {
+        line-height: 1.75;
+        letter-spacing: -0.0375rem;
+    }
+}
+
+/* ポイント2 */
+@media (min-width: 768px) {
+    .point-2 {
+        padding-left: 0.25rem;
+    }
+}
+
+.point-2 .three-point-body {
+    margin-bottom: 2.15rem;
+}
+
+@media (min-width: 768px) {
+    .point-2 .three-point-body {
+        margin-top: 0.2rem;
+        margin-left: 2.7rem;
+        margin-bottom: 2.4rem;
+        gap: 0.25rem;
+    }
+}
+
+.point-2 h3 {
+    padding-top: 0.05rem;
+    padding-left: 0;
+    font-size: 3.7rem;
+    line-height: 0.97;
+}
+
+@media (min-width: 768px) {
+    .point-2 h3 {
+        padding-top: 0.05rem;
+        padding-left: 0.08rem;
+        padding-bottom: 0;
+        font-size: 5rem;
+    }
+}
+
+.point-2 p {
+    letter-spacing: -0.01rem;
+    line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+    .point-2 p {
+        max-width: none;
+        margin-left: 0.13rem;
+        letter-spacing: -0.036rem;
+        line-height: 1.75;
+    }
+}
+
+/* ポイント3 */
+@media (min-width: 768px) {
+    .point-3 {
+        padding-left: 0.05rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .point-3 .three-point-body {
+        margin-top: 0.35rem;
+        padding-bottom: 0.1rem;
+        gap: 0.3rem;
+    }
+}
+
+.point-3 h3 {
+    padding-left: 0;
+    font-size: 3.7rem;
+    letter-spacing: 0.02rem;
+    line-height: 0.97;
+}
+
+@media (min-width: 768px) {
+    .point-3 h3 {
+        padding-top: 0.1rem;
+        padding-left: 0;
+        padding-bottom: 0;
+        font-size: 5rem;
+    }
+}
+
+.point-3 p {
+    letter-spacing: -0.03rem;
+    line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+    .point-3 p {
+        margin-left: 0.05rem;
+        letter-spacing: -0.0369rem;
+        line-height: 1.75;
+    }
+}
+
+/* contact部分 */
+.three-point-contact {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    row-gap: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    .three-point-contact {
+        padding-top: 1.85rem;
+        padding-bottom: 2.5rem;
+        row-gap: 1.3rem;
+    }
+}
+
+.three-point-contact-catch {
+    padding-top: 0.05rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .three-point-contact-catch {
+        font-size: 1.25rem;
+    }
+}
+
+.three-point-contact .button {
+    padding-top: 1.05rem;
+}
+
+@media (min-width: 768px) {
+    .three-point-contact .button {
+        padding-top: 1.1rem;
+        padding-bottom: 1.3rem;
+    }
+}
+
+.three-point-contact .button-icon {
+    right: 1.05rem;
+    transform: translate(0%, -8%);
+}
+
+@media (min-width: 768px) {
+    .three-point-contact .button-icon {
+        transform: translate(0%, -9%);
+    }
+}
+
+/* 講師紹介
+----------------------------------------------------- */
+
+/* セクションタイトル */
+.introduction .section-title {
+    margin-bottom: 2rem;
+    margin-top: 0.05rem;
+    padding-right: 0.1rem;
+    font-size: 1.5rem;
+    row-gap: 0.45rem;
+}
+
+@media (min-width: 768px) {
+    .introduction .section-title {
+        margin-top: 1.4rem;
+        margin-right: 0.05rem;
+        margin-bottom: 2.45rem;
+        font-size: 2.25rem;
+        row-gap: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .introduction .section-title-border {
+        margin-top: 0.25rem;
+        margin-right: 0.1rem;
+        width: 2.23rem;
+    }
+}
+
+/* コンテンツ部分 */
+.introduction-content {
+    margin-bottom: 5rem;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .introduction-content {
+        max-width: 47.0391rem;
+        margin-bottom: 5.9rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        gap: 2rem;
+    }
+}
+
+/* Kento先生 */
+.introduction-content-item {
+    width: 79.5%;
+    padding-top: 1rem;
+    background-color: #ffeee5;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .introduction-content-item {
+        max-width: 22.5rem;
+        width: 65.6%;
+        padding-top: 1.5rem;
+    }
+}
+
+.introduction-content-item img {
+    width: 42%;
+    margin-bottom: 0.35rem;
+    border-radius: 7.5rem;
+}
+
+@media (min-width: 768px) {
+    .introduction-content-item img {
+        width: 35.6%;
+        margin-bottom: 0.65rem;
+    }
+}
+
+.introduction-teacher-name {
+    padding-left: 0.1rem;
+    font-size: 1.15rem;
+    letter-spacing: -0.0125rem;
+}
+
+@media (min-width: 768px) {
+    .introduction-teacher-name {
+        padding-left: 0;
+    }
+}
+
+.introduction-teacher-career {
+    margin-top: 0.075rem;
+    font-size: 0.9563rem;
+    color: #333;
+    font-weight: 700;
+    letter-spacing: -0.075rem;
+}
+
+@media (min-width: 768px) {
+    .introduction-teacher-career {
+        margin-top: 0;
+        line-height: 1.8;
+    }
+}
+
+.introduction-item-text {
+    margin: 0.8125rem 1rem 1rem;
+    padding: 0.5rem 0.625rem 0.6875rem 1rem;
+    text-align: left;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .introduction-item-text {
+        margin: 1.05rem 1.5rem 1.5rem;
+        padding: 0.5rem 0.625rem 0.6875rem 1rem;
+        border-radius: 0.5rem;
+    }
+}
+
+.introduction-item-text span {
+    padding-left: 0.0625rem;
+}
+
+.introduction-item-text span:last-child {
+    padding-left: 0.0313rem;
+}
+
+/* Cindy先生 */
+.introduction-content-item:last-child img {
+    margin-bottom: 0.4rem;
+}
+
+@media (min-width: 768px) {
+    .introduction-content-item:last-child img {
+        margin-bottom: 0.65rem;
+    }
+}
+
+.introduction-content-item:last-child .introduction-teacher-name {
+    padding-top: 0.0125rem;
+    padding-right: 0.1rem;
+    letter-spacing: -0.02rem;
+}
+
+.introduction-content-item:last-child .introduction-teacher-career {
+    padding-right: 0.125rem;
+}
+
+@media (min-width: 768px) {
+    .introduction-content-item:last-child .introduction-teacher-career {
+        padding-top: 0.05rem;
+        padding-right: 0;
+    }
+}
+
+.introduction-content-item:last-child .introduction-item-text {
+    margin-top: 0.85rem;
+    margin-bottom: 0.95rem;
+    padding-top: 0.5rem;
+    padding-left: 1.0313rem;
+    padding-bottom: 0.7rem;
+}
+
+@media (min-width: 768px) {
+    .introduction-content-item:last-child .introduction-item-text {
+        margin-top: 0.95rem;
+        margin-bottom: 3.25rem;
+        padding-top: 0.5rem;
+        padding-left: 1.01rem;
+    }
+}
+
+.introduction-content-item:last-child {
+    background-color: #fff6e5;
+}
+
+@media (min-width: 768px) {
+    .introduction-content-item:last-child {}
+}
+
+/* contact部分 */
+.introduction-contact {
+    padding-top: 1.4rem;
+    padding-bottom: 2rem;
+    row-gap: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    .introduction-contact {
+        padding-top: 1.75rem;
+        padding-bottom: 2.55rem;
+        row-gap: 1.1rem;
+    }
+}
+
+.introduction-contact-catch {
+    width: 80%;
+    padding-top: 0.1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+@media (min-width: 768px) {
+    .introduction-contact-catch {
+        font-size: 1.25rem;
+        line-height: 1.75;
+    }
+}
+
+.introduction-contact .button {
+    padding-top: 1.05rem;
+    padding-bottom: 1.3rem;
+}
+
+@media (min-width: 768px) {
+    .introduction-contact .button {
+        margin-top: 0.2188rem;
+        padding-top: 1.05rem;
+        padding-bottom: 1.3rem;
+    }
+}
+
+.introduction-contact .button-icon {
+    transform: translate(0%, -8%);
+}
+
+@media (min-width: 768px) {
+    .introduction-contact .button-icon {
+        transform: translate(0%, -8%);
+    }
+}
+
+/* 料金プラン
+----------------------------------------------------- */
+.price {
+    margin-top: 4.3125rem;
+}
+
+@media (min-width: 768px) {
+    .price {
+        margin-top: 5.95rem;
+    }
+}
+
+/* セクションタイトル */
+.price .section-title {
+    padding-left: 0.05rem;
+    font-size: 1.5rem;
+    row-gap: 0.45rem;
+}
+
+@media (min-width: 768px) {
+    .price .section-title {
+        padding-left: 0.125rem;
+        font-size: 2.25rem;
+        letter-spacing: 0;
+        row-gap: 0.65rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .price .section-title-border {
+        margin-left: 0;
+        margin-right: 0.0625rem;
+    }
+}
+
+/* コンテンツ部分 */
+.price-content {
+    display: flex;
+    width: 92%;
+    flex-direction: column;
+    text-align: left;
+    margin: 1rem;
+    row-gap: 2.7rem;
+}
+
+@media (min-width: 768px) {
+    .price-content {
+        max-width: 47.5195rem;
+        margin-top: 1.8rem;
+        row-gap: 1.65rem;
+    }
+}
+
+/* コンテンツアイテム */
+.price-content-item-title {
+    margin-top: 0.25rem;
+    padding-left: 0.05rem;
+    font-size: 1.3rem;
+    letter-spacing: -0.043rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-item-title {
+        margin-top: 0;
+        padding-left: 0;
+        font-size: 1.5625rem;
+        letter-spacing: 0rem;
+    }
+}
+
+.price-table {
+    width: 100%;
+    margin-top: 0.65rem;
+    border-collapse: collapse;
+    border: #ddd solid 0.1875rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .price-table {
+        width: 100%;
+        margin-top: 0.6rem;
+    }
+}
+
+/* 料金表 */
+th,
+td {
+    border-collapse: collapse;
+    border: #ddd solid 0.0625rem;
+}
+
+/* 左列レイアウト */
+tr th:first-child,
+tr td:first-child {
+    width: 7.25rem;
+    height: auto;
+    text-wrap: nowrap;
+}
+
+@media (min-width: 768px) {
+
+    tr th:first-child,
+    tr td:first-child {
+        width: 14.85rem;
+    }
+}
+
+/* 最上段レイアウト */
+th {
+    padding-top: 0.5rem;
+    padding-bottom: 0.6875rem;
+    background-color: #f5f5f5;
+}
+
+@media (min-width: 768px) {
+    th {
+        font-size: 1.125rem;
+        font-size: 1.125rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.6rem;
+    }
+}
+
+/* 2段目レイアウト */
+tr:nth-of-type(2) td {
+    height: 5.5rem;
+}
+
+@media (min-width: 768px) {
+    tr:nth-of-type(2) td {
+        height: 6.1rem;
+    }
+}
+
+/* コース名 */
+tr td:first-child {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0079f2;
+}
+
+@media (min-width: 768px) {
+    tr td:first-child {
+        padding-right: 0.0688rem;
+        font-size: 1.15rem;
+        letter-spacing: -0.0125rem;
+    }
+}
+
+/* コメント文 */
+tr td:last-child {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    tr td:last-child {
+        font-size: 1rem;
+    }
+}
+
+/* 月額費用 */
+td span {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (min-width: 768px) {
+    td span {
+        font-size: 2.2rem;
+    }
+}
+
+/* 円 */
+td span>span {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    td span>span {
+        font-size: 1rem;
+    }
+}
+
+/* 6歳まで/小学校向けコース共通
+------------------------------------------------ */
+@media (min-width: 768px) {
+    .price-content-under-elementary {
+        padding-left: 0.2313rem;
+        padding-right: 0.2313rem;
+    }
+}
+
+/* 2段目 */
+/* 週回コース */
+tr:nth-of-type(2) td:first-child {
+    padding-bottom: 0.1875rem;
+}
+
+@media (min-width: 768px) {
+    tr:nth-of-type(2) td:first-child {
+        padding-bottom: 0.2rem;
+    }
+}
+
+/* まずは慣れる所から始めたい方に */
+tr:nth-of-type(2) td:last-child {
+    padding-top: 0.5625rem;
+    line-height: 1.65;
+}
+
+@media (min-width: 768px) {
+    tr:nth-of-type(2) td:last-child {
+        padding-top: 0.125rem;
+        line-height: 1.55;
+    }
+}
+
+@media (min-width: 768px) {
+    tr:nth-of-type(2) td:last-child div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* 1,890 */
+tr:nth-of-type(2) td:last-child span {
+    padding-right: 0.03rem;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    tr:nth-of-type(2) td:last-child span {
+        padding-left: 0.0187rem;
+        padding-right: 0;
+        letter-spacing: 0.0313rem;
+    }
+}
+
+/* 3段目 */
+/* 週2回コース */
+tr:nth-of-type(3) td:first-child {
+    padding-bottom: 0.2rem;
+}
+
+@media (min-width: 768px) {
+    tr:nth-of-type(3) td:first-child {
+        padding-bottom: 0.1875rem;
+    }
+}
+
+/* 無理がないペースで人気No.1 */
+tr:nth-of-type(3) td:last-child {
+    padding-top: 0.7rem;
+    line-height: 1.65;
+}
+
+@media (min-width: 768px) {
+    tr:nth-of-type(3) td:last-child {
+        padding-top: 0.8rem;
+        line-height: 1.35;
+    }
+}
+
+tr:nth-of-type(3) td:last-child span:first-child {
+    display: block;
+    text-wrap: nowrap;
+    padding-right: 0.125rem;
+    letter-spacing: 0.0112rem;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    tr:nth-of-type(3) td:last-child span:first-child {
+        font-size: 1rem;
+    }
+}
+
+tr:nth-of-type(3) td:last-child span:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-left: 0.1875rem;
+    padding-bottom: 0.2188rem;
+    line-height: 1.55;
+    font-weight: 700;
+    gap: 0.1rem;
+}
+
+@media (min-width: 768px) {
+    tr:nth-of-type(3) td:last-child span:nth-of-type(2) {
+        padding-left: 0.1875rem;
+        padding-bottom: 0.5rem;
+        letter-spacing: 0.01875rem;
+        line-height: 1.5;
+    }
+}
+
+/* 4段目 */
+/* 右枠レイアウト */
+tr:last-child td:last-child {
+    padding-top: 0.65rem;
+    padding-left: 0.25rem;
+    padding-bottom: 0.0125rem;
+    line-height: 1.65;
+}
+
+@media (min-width: 768px) {
+    tr:last-child td:last-child {
+        padding-top: 0.8rem;
+        padding-bottom: 0.25rem;
+        line-height: 1.35;
+    }
+}
+
+/* 早く上達したい人におすすめ */
+tr:last-child td:last-child span:first-child {
+    display: block;
+    text-wrap: nowrap;
+    padding-top: 0.05rem;
+    padding-right: 0.3rem;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    tr:last-child td:last-child span:first-child {
+        font-size: 1rem;
+    }
+}
+
+/* 5,670円 */
+tr:last-child td:last-child span:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-left: 0.1875rem;
+    line-height: 1.55;
+    font-weight: 700;
+    gap: 0.1rem;
+}
+
+@media (min-width: 768px) {
+    tr:last-child td:last-child span:nth-of-type(2) {
+        padding-left: 0;
+        gap: 0rem;
+        letter-spacing: 0.025rem;
+    }
+}
+
+/* 中学生向けコース
+------------------------------------------------ */
+@media (min-width: 768px) {
+    .price-content-above-junior-high {
+        padding-left: 0.1313rem;
+        padding-right: 0.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high {
+        padding-right: 0.35rem;
+    }
+}
+
+/* コース名レイアウト */
+.price-content-above-junior-high .price-content-item-title {
+    margin-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high .price-content-item-title {
+        letter-spacing: 0.0063rem;
+    }
+}
+
+/* 料金表レイアウト */
+.price-content-above-junior-high .price-table {
+    margin-top: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high .price-table {
+        margin: 0.4rem 0.1062rem 0;
+    }
+}
+
+/* 左列レイアウト */
+.price-content-above-junior-high th:first-child,
+td:first-child {
+    width: 8.25rem;
+}
+
+/* 月額費用(税込) */
+@media (min-width: 768px) {
+    .price-content-above-junior-high th:last-child {
+        padding-right: 0.125rem;
+    }
+}
+
+/* 2段目 */
+
+/* 中学基礎コース */
+.price-content-above-junior-high tr:nth-of-type(2) td:first-child {
+    height: 7.1rem;
+    margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:nth-of-type(2) td:first-child {
+        height: 6rem;
+        padding-bottom: 0.25rem;
+    }
+}
+
+/* 週2回で～基礎固め */
+.price-content-above-junior-high tr:nth-of-type(2) td:last-child {
+    padding-top: 0;
+    padding-left: 0.25rem;
+    padding-right: 0.1875rem;
+    line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:nth-of-type(2) td:last-child {
+        padding-top: 0;
+        padding-left: 0.0563rem;
+        padding-bottom: 0.25rem;
+        line-height: 1.6;
+    }
+}
+
+.price-content-above-junior-high tr:nth-of-type(2) div {
+    padding-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:nth-of-type(2) div {
+        padding-left: 0.0938rem;
+    }
+}
+
+/* 5,670円 */
+.price-content-above-junior-high tr:nth-of-type(2) td:last-child span {
+    padding-bottom: 0.125rem;
+    line-height: 1.45;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:nth-of-type(2) td:last-child span {
+        padding-left: 0.0938rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:nth-of-type(2) td:last-child span>span {
+        padding-left: 0.0625rem;
+    }
+}
+
+/* 3段目 */
+
+/* 中学応用コース */
+.price-content-above-junior-high tr:nth-of-type(3) td:first-child {
+    height: 5.7rem;
+    padding-bottom: 0.2rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:nth-of-type(3) td:first-child {
+        padding-bottom: 0.3rem;
+    }
+}
+
+/* 週3回で～バッチリ */
+.price-content-above-junior-high tr:nth-of-type(3) td:last-child {
+    padding: 0.65rem 0.1875rem 0.3187rem 0.25rem;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:nth-of-type(3) td:last-child {
+        padding-top: 0.63rem;
+        padding-bottom: 0.4rem;
+    }
+}
+
+.price-content-above-junior-high tr:nth-of-type(3) div {
+    gap: 0.05rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:nth-of-type(3) div {
+        padding-right: 0.0688rem;
+        line-height: 1.53;
+    }
+}
+
+/* 7,560円 */
+.price-content-above-junior-high tr:nth-of-type(3) td:last-child span {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-right: 0.08rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:nth-of-type(3) td:last-child span {
+        padding-left: 0.075rem;
+        padding-right: 0;
+        font-size: 2.2rem;
+        letter-spacing: 0.025rem;
+    }
+}
+
+/* 円 */
+.price-content-above-junior-high tr:nth-of-type(3) td:last-child span>span {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:nth-of-type(3) td:last-child span>span {
+        font-size: 1rem;
+    }
+}
+
+/* 4段目 */
+
+/* 英検上級コース */
+.price-content-above-junior-high tr:last-child td:first-child {
+    padding-top: 0.5rem;
+    padding-bottom: 0.625rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:last-child td:first-child {
+        padding-top: 0.1rem;
+        padding-bottom: 0.15rem;
+    }
+}
+
+/* 英検上級～おすすめ */
+.price-content-above-junior-high tr:last-child td:last-child {
+    padding: 0 0.1875rem 0.75rem 0.25rem;
+    line-height: 1.78;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:last-child td:last-child {
+        padding-top: 0.1rem;
+        padding-bottom: 0.85rem;
+    }
+}
+
+.price-content-above-junior-high tr:last-child div {
+    padding: 0.5625rem 0.5rem 0 0.4813rem;
+    gap: 0.4rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:last-child div {
+        padding-top: 0.4rem;
+        gap: 0.45rem;
+    }
+}
+
+/* 9,450 */
+.price-content-above-junior-high tr:last-child td:last-child span {
+    display: flex;
+    align-items: baseline;
+    line-height: 1;
+    padding-right: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.0094rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:last-child td:last-child span {
+        font-size: 2.2rem;
+        padding-left: 0.2188rem;
+        letter-spacing: 0.02rem;
+    }
+}
+
+/* 円 */
+.price-content-above-junior-high tr:last-child td:last-child span>span {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high tr:last-child td:last-child span>span {
+        padding-left: 0.0625rem;
+        font-size: 1rem;
+    }
+}
+
+/* 注釈文 */
+.price-content-item-footnote {
+    display: block;
+    text-align: center;
+    margin-top: 0.15rem;
+    font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-item-footnote {
+        text-align: left;
+    }
+}
+
+.price-content-above-junior-high .price-content-item-footnote {
+    margin-top: 0.2rem;
+}
+
+@media (min-width: 768px) {
+    .price-content-above-junior-high .price-content-item-footnote {
+        margin-top: 0.1rem;
+    }
+}
+
+/* .contact部分 */
+.price-contact {
+    margin-top: 3.75rem;
+    padding-bottom: 2rem;
+    font-size: 1rem;
+    row-gap: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    .price-contact {
+        margin-top: 5.8rem;
+        padding-bottom: 2.5rem;
+        row-gap: 1.2rem;
+    }
+}
+
+.price-contact-catch {
+    margin: 1.55rem 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .price-contact-catch {
+        margin: 1.9rem 2rem 0;
+        font-size: 1.25rem;
+    }
+}
+
+.price-contact .button {
+    padding-top: 1.05rem;
+}
+
+@media (min-width: 768px) {
+    .price-contact .button {
+        margin-top: 0.1rem;
+        padding-top: 1.05rem;
+        padding-bottom: 1.35rem;
+    }
+}
+
+.price-contact .button-icon {
+    right: 1.03rem;
+    transform: translate(0%, -8%);
+}
+
+@media (min-width: 768px) {
+    .price-contact .button-icon {
+        transform: translate(0%, -8%);
+    }
+}
+
+/* よくあるご質問
+-------------------------------------------- */
+.qa {
+    margin-top: 4.34rem;
+}
+
+@media (min-width: 768px) {
+    .qa {
+        margin-top: 4.3rem;
+    }
+}
+
+/* セクションタイトル */
+.qa .section-title {
+    padding-top: 0.05rem;
+    padding-right: 0.0625rem;
+    letter-spacing: -0.05rem;
+    row-gap: 0.45rem;
+    line-height: 1.68;
+}
+
+@media (min-width: 768px) {
+    .qa .section-title {
+        margin-top: 1.85rem;
+        padding-right: 0;
+        font-size: 2.25rem;
+        letter-spacing: 0;
+        row-gap: 0.75rem;
+    }
+}
+
+/* アコーディオンメニュー */
+.qa-accordion {
+    margin: 1.8rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .qa-accordion {
+        max-width: 56.2559rem;
+        margin-top: 2.25rem;
+        gap: 1.25rem;
+    }
+}
+
+/* アコーディオンアイテム */
+.accordion-item {
+    border: 0.0625rem solid #f26618;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+/* アコーディオンタイトル部分 */
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0.95rem;
+    padding-right: 0.8rem;
+    padding-bottom: 1.2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.accordion-item:not(:first-child) .accordion-title {
+    padding-bottom: 1.125rem;
+}
+
+@media (min-width: 768px) {
+    .accordion-item:not(:first-child) .accordion-title {
+        padding-bottom: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .accordion-title {
+        padding-right: 1.2rem;
+        padding-bottom: 1.25rem;
+        justify-content: space-between;
+        gap: 4.9rem;
+    }
+}
+
+.accordion-item .accordion-title div {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .accordion-item .accordion-title div {
+        gap: 0.75rem;
+    }
+}
+
+/* Qアイコン */
+.ico-q {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.9375rem;
+    padding: 0.125rem 0.63rem 1.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    background-color: #ffeee5;
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    .ico-q {
+        width: 3rem;
+        height: 3rem;
+        margin-top: 1.2rem;
+        margin-left: 0.4437rem;
+        font-size: 1.5rem;
+        border-radius: 2rem;
+    }
+}
+
+/* 質問文 */
+.accordion-title-text {
+    padding: 0.9375rem 0.75rem 0;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .accordion-title-text {
+        padding-top: 1.7rem;
+        padding-left: 0.4rem;
+        letter-spacing: 0.005rem;
+    }
+}
+
+/* 矢印アイコン */
+.accordion-title i {
+    padding-top: 0.8063rem;
+}
+
+@media (min-width: 768px) {
+    .accordion-title i {
+        padding-top: 1.25rem;
+        font-size: 1.6rem;
+    }
+}
+
+/* アコーディオンコンテンツ */
+.accordion-content {
+    display: none;
+    background-color: #ffeee5;
+}
+
+/* アコーディオンコンテンツコンテナ */
+.accordion-content-container {
+    display: flex;
+    padding: 1.0625rem 1.4rem 1.1875rem 0.9375rem;
+}
+
+@media (min-width: 768px) {
+    .accordion-content-container {
+        padding: 1.25rem 3rem 1.95rem 1.45rem;
+    }
+}
+
+/* Aアイコン */
+.ico-a {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.2rem 0.65rem 1.7rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background-color: #f26618;
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    .ico-a {
+        width: 3.8rem;
+        height: 3rem;
+        padding: 0.2rem 0.65rem 0.7rem;
+        font-size: 1.5rem;
+        border-radius: 1.5rem;
+    }
+}
+
+/* 回答文 */
+.accordion-content-text {
+    text-align: left;
+    padding-left: 0.7312rem;
+    padding-right: 0.9375rem;
+    letter-spacing: 0.01rem;
+}
+
+@media (min-width: 768px) {
+    .accordion-content-text {
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        letter-spacing: 0.003rem;
+    }
+}
+
+/* 質問1 */
+@media (min-width: 768px) {
+    .q1 .accordion-title-text {
+        padding-left: 0.3rem;
+        padding-right: 0rem;
+        letter-spacing: 0.003rem;
+    }
+}
+
+/* 質問2 */
+.q2 .accordion-content .accordion-content-container {
+    padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .q2 .accordion-content .accordion-content-container {
+        padding: 1.25rem 3rem 2rem 1.45rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .q2 .accordion-title-text {
+        padding-left: 0.3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .q2 .ico-a {
+        width: 3rem;
+        padding-top: 0.15rem;
+    }
+}
+
+/* 質問3 */
+.q3 .accordion-title-text {
+    letter-spacing: 0.025rem;
+}
+
+@media (min-width: 768px) {
+    .q3 .ico-q {
+        padding-top: 0.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .q3 .accordion-title-text {
+        padding-top: 1.65rem;
+        padding-left: 0.3rem;
+        letter-spacing: 0rem;
+    }
+}
+
+.q3 .accordion-content-container {
+    padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .q3 .accordion-content-container {
+        padding-top: 1.2rem;
+        padding-left: 1.45rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .q3 .ico-a {
+        width: 3.7rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .q3-text {
+        letter-spacing: 0.01rem;
+    }
+}
+
+.q3 a {
+    text-decoration: underline;
+}
+
+.q3 a:hover {
+    background-color: bisque;
+}
+
+/* 質問4 */
+.accordion-item:last-child .accordion-content-container {
+    padding-top: 1.0625rem;
+}
+
+@media (min-width: 768px) {
+    .accordion-item:last-child .accordion-content-container {
+        padding-top: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .q4 .accordion-title-text {
+        padding-top: 1.7rem;
+        padding-left: 0.3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .q4 .ico-q {
+        padding-top: 0.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .q4 .ico-a {
+        width: 3.7rem;
+    }
+}
+
+/* contact部分 */
+.qa-contact {
+    margin-top: 3.125rem;
+    padding-bottom: 2rem;
+    row-gap: 1.15rem;
+}
+
+@media (min-width: 768px) {
+    .qa-contact {
+        margin-top: 4.2rem;
+        padding-bottom: 2.5rem;
+        row-gap: 1.3rem;
+    }
+}
+
+.qa-contact-catch {
+    margin: 1.5rem 2.3rem 0.0625rem 2.3rem;
+    font-size: 1rem;
+    letter-spacing: 0.0044rem;
+}
+
+@media (min-width: 768px) {
+    .qa-contact-catch {
+        margin-right: 2.3rem;
+        padding-top: 0.35rem;
+        font-size: 1.3rem;
+        letter-spacing: -0.04rem;
+        line-height: 1.67;
+    }
+}
+
+@media (min-width: 768px) {
+    .qa-contact .button {
+        padding-top: 1.05rem;
+        padding-bottom: 1.3rem;
+    }
+}
+
+.qa-contact .button-icon {
+    transform: translate(0%, -9%);
+}
+
+@media (min-width: 768px) {
+    .qa-contact .button-icon {
+        transform: translate(0%, -8%);
+    }
+}
+
+/* フッター
+------------------------------------------ */
+.footer-sns-list-container {
+    width: 100%;
+    padding-top: 0.1rem;
+    padding-bottom: 2.35rem;
+    background-color: #222;
+}
+
+@media (min-width: 768px) {
+    .footer-sns-list-container {
+        padding-bottom: 2.5rem;
+    }
+}
+
+.footer-sns-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.1rem;
+    margin-right: 0;
+    padding-left: 0.15rem;
+    padding-right: 0.3rem;
+    column-gap: 2.6rem;
+}
+
+@media (min-width: 768px) {
+    .footer-sns-list {
+        margin-top: 2.05rem;
+        padding-left: 0.3rem;
+        padding-right: 0.4rem;
+        column-gap: 2.35rem;
+    }
+}
+
+.footer-sns-list i {
+    display: block;
+    font-size: 1.9688rem;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .footer-sns-list i {
+        font-size: 2rem;
+    }
+}
+
+.footer-sns-list i:hover {
+    color: #919191;
+}
+
+.footer-bottom {
+    padding-top: 1.75rem;
+    padding-right: 0.05rem;
+    gap: 1.3rem;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        padding-top: 2rem;
+        gap: 1.6rem;
+    }
+}
+
+.footer-copyright {
+    padding-top: 0.15rem;
+    letter-spacing: 0.004rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: #999;
+}
