@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="94" height="72" viewBox="0 0 94 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="business_business_list_img_2.svg" data-name="business/business_list_img_2.svg" class="cls-1" d="M2339,1851v72h94v-72h-94Zm17.68,22.8L2348,1865h13l8.93,8.8h-13.25ZM2385,1862l8-8h13l-8,8h-13Zm-4,0h-13l8-8h13Zm-17,0h-14l8-8h14Zm10.04,11.8L2365,1865h14l8.28,8.8h-13.24Zm17.35,0L2383,1865h13l8.63,8.8h-13.24ZM2409,1874l-9-9h13l9,9h-13Zm-7-12,8-8h13l-8,8h-13Zm-60-8h12l-8,8h-4v-8Zm0,11h2l9,9h-11v-9Zm88,55h-88v-43h88v43Zm0-46h-4l-9-9h13v9Zm0-12h-11l8-8h3v8Zm-9,26v-3h-70v3h33v6h-33v3h15v11h-15v3h71l-1-3h-17v-11h17v-3h-34v-6h34Zm-20,20h-32v-11h32v11Z" transform="translate(-2339 -1851)"/>
+</svg>

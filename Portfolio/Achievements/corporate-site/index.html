@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DigiNova Design Inc.</title>
+    <meta name="description"
+        content="DigiNova Design Inc.(デジノヴァデザイン株式会社)はデジタルコンテンツのエキスパート集団です。クリエイティブの力でさまざまな課題解決をお手伝いします。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Smart Tab -->
+    <link href="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/css/smart_tab_all.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- ファビコン -->
+    <link rel="icon" href="assets/favicon.ico">
+
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <h1 class="header-logo"><a href="./" class="header-logo-link"><img src="assets/images/header/header_logo.webp"
+                    alt="DigiNova Design"></a></h1>
+
+        <!-- ハンバーガーボタン -->
+        <button type="button" class="hamburger-button">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <!-- ナビゲーション、ヘッダーメニュー -->
+        <nav class="hamburger-menu header-nav">
+            <ul class="hamburger-menu-list-group header-nav-list-group flex outfit">
+                <li><a href="#">about</a></li>
+                <li><a href="#">business</a></li>
+                <li><a href="#">works</a></li>
+                <li><a href="#">news</a></li>
+                <li><a href="./access/">access</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- カバー -->
+        <div class="cover">
+
+            <div class="cover-container">
+
+                <!-- カバー背景画像 -->
+                <div class="cover-top"></div>
+
+                <!-- カバーテキスト -->
+                <div class="cover-bottom">
+                    <div class="cover-catch">
+                        <p class="cover-title">デザイン力で</p>
+                        <p class="cover-title">未来を創る</p>
+                        <p class="cover-description">DigiNova Design
+                            Inc.はデジタルコンテンツの<br>エキスパート集団です。<br>クリエイティブの力で<br>さまざまな課題解決をお手伝いします。</p>
+                    </div>
+                    <!-- スクロール -->
+                    <span class="cover-scroll outfit">SCROLL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- about -->
+        <section class="about">
+            <div class="container about-container">
+                <h2 class="about-title">DigiNova Design Inc.とは</h2>
+                <p class="about-description">DigiNova Design
+                    Inc.はデザイン/映像制作・ブランディング・デジタルマーケティングを軸に、デザイン・デジタルの力で課題を解決します。<span
+                        class="about-description-spacing">すべての制作工程でオリジナルデザインを取り入れ、デジタル(Digital)デザイ</span>ン(Design)の力でより良い未来を創造(Nova)します。
+                </p>
+            </div>
+        </section>
+
+        <!-- business -->
+        <section class="business">
+            <div class="container">
+                <h2 class="section-title outfit">business</h2>
+
+                <!-- リスト -->
+                <div class="business-list-group">
+                    <!-- デザイン制作 -->
+                    <a href="#" class="business-list-group-item">
+                        <figure class="business-list-image"><img src="assets/images/business/business_list_img_1.svg"
+                                alt=""></figure>
+                        <h3 class="business-list-title">デザイン制作</h3>
+                        <i class="business-list-icon bi bi-chevron-right"></i>
+                    </a>
+                    <!-- 映像制作 -->
+                    <a href="#" class="business-list-group-item">
+                        <figure class="business-list-image"><img src="assets/images/business/business_list_img_2.svg"
+                                alt=""></figure>
+                        <h3 class="business-list-title">映像制作</h3>
+                        <i class="business-list-icon bi bi-chevron-right"></i>
+                    </a>
+                    <!-- ブランディング -->
+                    <a href="#" class="business-list-group-item">
+                        <figure class="business-list-image"><img src="assets/images/business/business_list_img_3.svg"
+                                alt=""></figure>
+                        <h3 class="business-list-title">ブランディング</h3>
+                        <i class="business-list-icon bi bi-chevron-right"></i>
+                    </a>
+                    <!-- デジタルマーケティング -->
+                    <a href="#" class="business-list-group-item">
+                        <figure class="business-list-image"><img src="assets/images/business/business_list_img_4.svg"
+                                alt=""></figure>
+                        <h3 class="business-list-title">デジタル<br>マーケティング</h3>
+                        <i class="business-list-icon bi bi-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- works -->
+        <section class="works">
+            <div class="container">
+                <h2 class="section-title outfit">works</h2>
+
+                <!-- タブ -->
+                <div id="smarttab" class="tab">
+                    <!-- タブナビゲーション -->
+                    <ul class="nav">
+                        <li><a class="nav-link" href="#tab-1">デザイン</a></li>
+                        <li><a class="nav-link" href="#tab-2">映像</a></li>
+                        <li><a class="nav-link" href="#tab-3">その他</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- タブ1 -->
+                        <div id="tab-1" class="tab-pane" role="tabpanel">
+                            <!-- 1個目 -->
+                            <div class="works-tab-content-item">
+                                <img src="assets/images/works/works_tab_ilist_1_img_1.jpg" alt="">
+                                <h3 class="works-tab-content-title">株式会社サンプル<br>オフィシャルサイト</h3>
+                            </div>
+                            <!-- 2個目 -->
+                            <div class="works-tab-content-item">
+                                <img src="assets/images/works/works_tab_ilist_1_img_2.jpg" alt="">
+                                <h3 class="works-tab-content-title">サンプルクリニック<br>リーフレット</h3>
+                            </div>
+                            <!-- 3個目 -->
+                            <div class="works-tab-content-item">
+                                <img src="assets/images/works/works_tab_ilist_1_img_3.jpg" alt="">
+                                <h3 class="works-tab-content-title">サンプル大学<br>オフィシャルサイト</h3>
+                            </div>
+                        </div>
+                        <!-- タブ2 -->
+                        <div id="tab-2" class="tab-pane" role="tabpanel">
+                            <!-- 1個目 -->
+                            <div class="works-tab-content-item">
+                                <img src="assets/images/works/works_tab_ilist_2_img_1.jpg" alt="">
+                                <h3 class="works-tab-content-title">サンプルモバイル<br>CM</h3>
+                            </div>
+                            <!-- 2個目 -->
+                            <div class="works-tab-content-item">
+                                <img src="assets/images/works/works_tab_ilist_2_img_2.jpg" alt="">
+                                <h3 class="works-tab-content-title">株式会社サンプル<br>ティザームービー</h3>
+                            </div>
+                            <!-- 3個目 -->
+                            <div class="works-tab-content-item">
+                                <img src="assets/images/works/works_tab_ilist_2_img_3.jpg" alt="">
+                                <h3 class="works-tab-content-title">サンプル旅館<br>コンセプトムービー</h3>
+                            </div>
+                        </div>
+                        <!-- タブ3 -->
+                        <div id="tab-3" class="tab-pane" role="tabpanel">
+                            <!-- 1個目 -->
+                            <div class="works-tab-content-item">
+                                <img src="assets/images/works/works_tab_ilist_3_img_1.jpg" alt="">
+                                <h3 class="works-tab-content-title">サンプル美術館<br>ブランディング</h3>
+                            </div>
+                            <!-- 2個目 -->
+                            <div class="works-tab-content-item">
+                                <img src="assets/images/works/works_tab_ilist_3_img_2.jpg" alt="">
+                                <h3 class="works-tab-content-title">サンプル株式会社<br>広告ディレクション</h3>
+                            </div>
+                            <!-- 3個目 -->
+                            <div class="works-tab-content-item">
+                                <img src="assets/images/works/works_tab_ilist_3_img_3.jpg" alt="">
+                                <h3 class="works-tab-content-title">サンプル飲料<br>公式Instagram運用</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- news -->
+        <section class="news">
+            <div class="container">
+                <h2 class="section-title outfit">news</h2>
+
+                <!-- リスト -->
+                <ul class="news-list">
+                    <!-- 1個目 -->
+                    <li>
+                        <span class="news-date outfit">2022.12.20</span>
+                        <span class="news-badge">サービス</span>
+                        <a href="#" class="news-text">【プレスリリース】新サービス「サンプルサービス」をリリース！</a>
+                    </li>
+                    <!-- 2個目 -->
+                    <li>
+                        <span class="news-date outfit">2022.11.17</span>
+                        <span class="news-badge">セミナー</span>
+                        <a href="#" class="news-text">「デザイン思考で課題を可視化」オンラインセミナー開催</a>
+                    </li>
+                    <!-- 3個目 -->
+                    <li>
+                        <span class="news-date outfit">2022.10.24</span>
+                        <span class="news-badge">その他</span>
+                        <a href="#" class="news-text">「月刊サンプル」に社員インタビューが掲載されました</a>
+                    </li>
+                    <!-- 4個目 -->
+                    <li>
+                        <span class="news-date outfit">2022.09.08</span>
+                        <span class="news-badge">その他</span>
+                        <a href="#" class="news-text">Webサイトリニューアル</a>
+                    </li>
+                </ul>
+                <!-- ボタン -->
+                <a href="#" class="button button-orange">もっと見る<i
+                        class="button-icon button-orange-icon bi bi-arrow-right-short"></i></a>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section class="contact flex">
+            <div class="container">
+                <h2 class="section-title outfit">contact</h2>
+                <a href="#" class="button button-white-ghost">お問い合わせはこちら<i
+                        class="button-icon button-white-ghost-icon bi bi-arrow-right-short"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer outfit">
+        <!-- ナビゲーション -->
+        <nav class="footer-nav">
+            <ul class="flex">
+                <li><a href="#">recruit</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">sitemap</a></li>
+            </ul>
+        </nav>
+        <!-- コピーライト -->
+        <span class="footer-copyright">Copyright @ 2022 DigiNova Design Inc. All Rights Reserved.</span>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Smart Tab -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/js/jquery.smartTab.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
