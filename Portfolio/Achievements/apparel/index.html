@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KURASHI MADE</title>
+    <meta name="description" content="商品の紹介ページです">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header class="header">
+
+        <!-- ロゴ -->
+        <h1 class="header-logo">KURASHI MADE</h1>
+
+        <!-- カートボタン -->
+        <div class="header-button header-button-cart"><i class="bi bi-cart-fill"></i></div>
+
+        <!-- ハンバーガーボタン -->
+        <div class="header-button header-button-hamburger"><i class="bi bi-list"></i></div>
+
+        <!-- ハンバーガーメニュー -->
+        <nav class="hamburger-menu">
+            <ul class="hamburger-menu-list">
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- メイン -->
+    <main>
+
+        <!-- カバー -->
+        <div class="cover">
+
+            <!-- キャッチコピー -->
+            <div class="catch">Made in Japan<br>Made for everyday</div>
+
+            <!-- SCROLLの装飾 -->
+            <div class="scroll">
+                <!-- 縦線 -->
+                <div class="horizon-line"></div>
+                <!-- SCROLL -->
+                <div class="scroll-text">SCROLL</div>
+            </div>
+        </div>
+
+        <!-- コンセプト -->
+        <section id="concept" class="concept">
+
+            <div class="container">
+                <h2 class="section-title">Concept</h2>
+                <div class="concept-container">
+                    <img src="./images/concept/concept.jpg" alt="Concept" class="concept-image">
+                    <p class="concept-text">
+                        「日本製で日々の暮らしを豊かにする」
+                        <br>
+                        私たちのブランドコンセプトは、そんな思いから出発しました。
+                        <br>
+                        長く、飽きずに使えるよう設計されたコレクションは、毎日の生活をより上質にする為の工夫がちりばめられています。
+                        <br>
+                        日本の伝統が生んだ職人技と革新性を体現した各アイテムたちが、あなたの日々の生活に安らぎと新たな価値をもたらすことでしょう。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 商品 -->
+        <section id="products" class="products">
+            <div class="container">
+                <h2 class="section-title">Products</h2>
+
+                <div class="products-container">
+                    <!-- 1個目 -->
+                    <div class="products-item">
+                        <img src="./images/products/products1.jpg" alt="Products1" class="products-image">
+                        <div class="products-title">
+                            <h3 class="products-heading">Shirt</h3>
+                            <span class="products-number">DD0001</span>
+                        </div>
+                        <p class="products-text">無駄のないデザインと実用性を兼ね備えたシャツ。柔らかな肌触りと軽やかなフィット感は、普段使いに最適です。3色展開。</p>
+                        <a href="#" class="button-checkout">購入する</a>
+                    </div>
+                    <!-- 2個目 -->
+                    <div class="products-item">
+                        <img src="./images/products/products2.jpg" alt="Products1" class="products-image">
+                        <div class="products-title">
+                            <h3 class="products-heading">Mist</h3>
+                            <span class="products-number">DD0002</span>
+                        </div>
+                        <p class="products-text">落ち着いた香りと保湿効果を兼ね備えたミスト。肌に優しい低刺激性で、ちょっとしたリフレッシュに最適なアイテムです。</p>
+                        <a href="#" class="button-checkout">購入する</a>
+                    </div>
+                    <!-- 3個目 -->
+                    <div class="products-item">
+                        <img src="./images/products/products3.jpg" alt="Products1" class="products-image">
+                        <div class="products-title">
+                            <h3 class="products-heading">Smart Watch</h3>
+                            <span class="products-number">DD0003</span>
+                        </div>
+                        <p class="products-text">機能美とデザイン性が光るスマートウォッチ。日常のパートナーにふさわしい、ライトな装着感の逸品です。</p>
+                        <a href="#" class="button-checkout">購入する</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ギャラリー -->
+        <section id="gallery" class="gallery">
+
+            <div class="container gallery-container">
+                <h2 class="section-title">Gallery</h2>
+                <div class="carousel">
+                    <div><img src="./images/gallery/gallery1.jpg" alt="Gallery1"></div>
+                    <div><img src="./images/gallery/gallery2.jpg" alt="Gallery2"></div>
+                    <div><img src="./images/gallery/gallery3.jpg" alt="Gallery3"></div>
+                    <div><img src="./images/gallery/gallery4.jpg" alt="Gallery4"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <ul class="footer-contact">
+                <li><a href="mailto:xxx@techacademy.jp" class="footer-contact-link"><i class="bi bi-envelope"></i></a>
+                </li>
+                <li><a href="#" class="footer-contact-link"><i class="bi bi-cart-fill"></i></a></li>
+                <li><a href="#" class="footer-contact-link"><i class="bi bi-instagram"></i></a></li>
+            </ul>
+            <ul class="footer-menu">
+                <li><a href="#">会社概要</a></li>
+                <li><a href="#">利用規約</a></li>
+                <li><a href="#">プライバシーポリシー</a></li>
+                <li><a href="#">特定商取引法に基づく表記</a></li>
+            </ul>
+            <span class="footer-copyright">&copy; KURASHI MADE Inc.
+
+            </span>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
