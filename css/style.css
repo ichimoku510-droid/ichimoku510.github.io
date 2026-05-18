@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+/* ページ全体のスタイル
+--------------------------------------- */
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #6888a7;
+    background-color: #d4e8fc;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #6888a7;
+    text-decoration: none;
+}
+
+/* 部品
+-------------------------------------------- */
+
+/* flexbox */
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+section {
+    padding-bottom: 5rem;
+}
+
+/* セクションタイトル */
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+@media(max-width: 767.98px) {
+    .section-title {
+        font-size: 3.75rem;
+    }
+}
+
+/* ボタン */
+.button,
+input[type="submit"] {
+    width: 100%;
+    max-width: 17rem;
+    padding-top: 0.7rem;
+    padding-bottom: 1.1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4rem;
+    color: #333;
+    background-color: #fcba49;
+    border: 0.3125rem solid #fcd490;
+}
+
+@media(max-width: 767.98px) {
+
+    .button,
+    input[type="submit"] {
+        width: 50vw;
+        height: 4rem;
+        padding: 0;
+        font-size: 1.4rem;
+    }
+}
+
+.button:hover {
+    color: #bfbfbf;
+    background-color: #fae57e;
+}
+
+
+/* ヘッダー
+-------------------------------------------- */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    padding: 0 4rem;
+    background-color: #d4e8fc;
+}
+
+@media(max-width: 767.98px) {
+    header {
+        height: 2.8rem;
+        padding: 0 1.1875rem;
+    }
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    max-width: 1166px;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+/* ページタイトル */
+.header-title {
+    font-size: 2rem;
+}
+
+@media(max-width: 767.98px) {
+    .header-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* PC表示レイアウト */
+.header-nav-list-group {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ハンバーガーボタン */
+.hamburger-button {
+    display: none;
+}
+
+@media(max-width: 767.98px) {
+    .hamburger-button {
+        display: inline-block;
+    }
+}
+
+.hamburger-button i {
+    font-size: 1.5rem;
+    color: #6888a7;
+}
+
+/* ハンバーガーメニュー */
+@media(max-width: 767.98px) {
+    .header-nav-list {
+        display: none;
+        position: fixed;
+        top: 2.8rem;
+        left: 0;
+        width: 100%;
+        background-color: #6888a7;
+    }
+
+    .header-nav-list-group {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 0 3.125rem;
+        row-gap: 1.5rem;
+    }
+
+    .header-nav-list-group a {
+        color: #d4e8fc;
+    }
+}
+
+
+/* フッター
+---------------------------------------------- */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.25rem;
+    font-size: 1.125rem;
+    color: #fff;
+    background-color: #333;
+}
