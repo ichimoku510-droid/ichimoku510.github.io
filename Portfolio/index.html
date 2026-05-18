@@ -147,10 +147,10 @@
             </div>
         </section>
 
-        <!-- <section id="contact" class="contact">
+        <section id="contact" class="contact">
             <h2 class="section-title">CONTACT</h2>
 
-            <form class="contact-form">
+            <form class="contact-form" action="https://formspree.io/f/xwvzkqeb" method="post">
 
                 <div>
                     <label class="contact-label" for="name">お名前</label>
@@ -165,10 +165,20 @@
                     <textarea id="inquiry" name="inquiry"></textarea>
                 </div>
 
+                <!-- ハニーポットフィールド -->
+                <input class="honeypot" type="text" name="_gotcha" style="display:none" tabindex="-1"
+                    autocomplete="off">
+
+                <!-- リダイレクト設定 -->
+                <input type="hidden" name="_next" value="https://yoursite.com/thanks.html">
+
+                <!-- 件名の固定 -->
+                <input type="hidden" name="_subject" value="ポートフォリオサイト お問い合わせ">
+
                 <input class="contact-button" type="submit" value="送信する">
 
             </form>
-        </section> -->
+        </section>
 
         <footer>
             <small>2026 &copy;GoTo’s Portfolio</small>
